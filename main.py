@@ -28,9 +28,9 @@ def holiday(ctx, name, manager, num_days, from_date,
 
     Fills out a holiday request form on your behalf so you don't have to.
     """
-    texts = make_form_content(name, manager, num_days, from_date.strftime(
+    text_and_locs = make_form_content(name, manager, num_days, from_date.strftime(
         '%d/%m/%y'), to_date.strftime('%d/%m/%y'))
-    overlay_text_at_loc_on_pdf(texts, template_file, output_file)
+    overlay_text_at_loc_on_pdf(text_and_locs, template_file, output_file)
     ctx.obj['output_file'] = output_file
 
 @click.command()

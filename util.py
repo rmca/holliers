@@ -38,4 +38,3 @@ def make_form_content(name, manager, num_days, from_date, to_date):
         (to_date, (405, 425,),),
     ]
 
-
